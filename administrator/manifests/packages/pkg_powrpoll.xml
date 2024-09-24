@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5">
+<name>POWr Poll</name>
+<author>POWr.io</author>
+<creationDate>Dec 2021</creationDate>
+<version>4.0</version>
+<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+<authorEmail>info@powr.io</authorEmail>
+<authorUrl>https://www.powr.io</authorUrl>
+<packagename>POWr Poll</packagename>
+<packager>POWr.io</packager>
+<packagerurl>https://www.powr.io/</packagerurl>
+<description>Learn more about your users with a custom poll!</description>
+<files folder="packages">
+  <file type="module" client="site">mod_powrpoll.zip</file>
+  <file type="plugin" group="client">plg_powrshortcodes.zip</file>
+  <file type="plugin" group="client">plg_powricon.zip</file>
+</files>
+<updateservers>
+  <server type="extension" priority="2" name="POWr Poll Updates">https://www.powr.io/joomla/update_powrpoll.xml</server>
+</updateservers>
+</extension>

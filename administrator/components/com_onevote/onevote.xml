@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+
+        <name>OneVote!</name>
+        <!-- The following elements are optional and free of formatting constraints -->
+        <creationDate>November 22, 2014</creationDate>
+        <author>Brian Keahl</author>
+        <authorEmail>briankeahl@advcomsys.com</authorEmail>
+        <authorUrl>http://www.advcomsys.com</authorUrl>
+        <copyright>(c) Advanced Computer Systems 2014-2021</copyright>
+		<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+        <!--  The version string is recorded in the components table -->
+        <version>1.2.8</version>
+        <!-- The description is optional and defaults to the name -->
+        <description>One Vote provides a means of staging election with anonymous and public nominating and voting. You'll find OneVote! under the components menu. You can then add a menu link to the elections page.</description>
+	    <updateservers>
+			<server type="extension" priority="2" name="Onevote Extension Updates">http://www.advcomsys.com/joomla/jonevoteupdate.xml</server>
+	    </updateservers>
+
+        <install> <!-- Runs on install -->
+                <sql>
+                        <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+                </sql>
+        </install>
+        <uninstall> <!-- Runs on uninstall -->
+                <sql>
+                        <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+                </sql>
+        </uninstall>
+        <update> <!-- Runs on update; New in 2.5 -->
+                <schemas>
+                        <schemapath type="mysql">sql/updates/mysql</schemapath>
+                </schemas>
+        </update>
+
+        <!-- Site Main File Copy Section -->
+        <!-- Note the folder attribute: This attribute describes the folder
+                to copy FROM in the package to install therefore files copied
+                in this section are copied from /site/ in the package -->
+        <files folder="site">
+                <filename>index.html</filename>
+                <filename>onevote.php</filename>
+                <filename>controller.php</filename>
+                <filename>results.php</filename>
+                <filename>pastresults.php</filename>
+                <folder>views</folder>
+                <folder>models</folder>
+				<folder>images</folder>
+        </files>
+
+        <administration>
+                <!-- Administration Menu Section -->
+                <menu>COM_ONEVOTE_MENU</menu>
+                <!-- Administration Main File Copy Section -->
+                <!-- Note the folder attribute: This attribute describes the folder
+                        to copy FROM in the package to install therefore files copied
+                        in this section are copied from /admin/ in the package -->
+                <files folder="admin">
+                        <!-- Admin Main File Copy Section -->
+                        <filename>index.html</filename>
+                        <filename>onevote.php</filename>
+                        <!-- SQL files section -->
+                        <folder>sql</folder>
+                        <!-- tables files section -->
+                        <folder>tables</folder>
+                        <!-- models files section -->
+                        <folder>models</folder>
+						<folder>language</folder>
+                </files>
+                <languages folder="admin">
+                        <language tag="en-GB">language/en-GB/en-GB.com_onevote.ini</language>
+                        <language tag="en-GB">language/en-GB/en-GB.com_onevote.sys.ini</language>
+                </languages>
+        </administration>
+
+</extension>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+        <layout title="OneVote!">
+                <message>OneVote!</message>
+        </layout>
+        <fields
+                name="request"
+                addfieldpath="/administrator/components/com_helloworld/models/fields"
+        >
+                <fieldset name="request">
+                        <field
+                                name="id"
+                                type="onevote"
+                                label="Menu_Title"
+                                description="This is what will appear on the menu."
+                        />
+                </fieldset>
+        </fields>
+</metadata>

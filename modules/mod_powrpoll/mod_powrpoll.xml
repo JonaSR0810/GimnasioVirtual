@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade">
+  <name>POWr Poll</name>
+  <author>POWr.io</author>
+  <creationDate>Dec 2021</creationDate>
+  <copyright>Copyright (©) 2017 POWr. All rights reserved.</copyright>
+  <authorEmail>info@powr.io</authorEmail>
+  <authorUrl>https://powr.io</authorUrl>
+  <version>3.0</version>
+  <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+  <languages>
+      <language tag="en-GB">en-GB.mod_powrpoll.ini</language>
+  </languages>
+  <description>MOD_POLL_DESCRIPTION</description>
+  <files>
+  <filename>index.html</filename>
+      <filename module="mod_powrpoll">mod_powrpoll.php</filename>
+      <filename>powr_joomla.js</filename>
+  </files>
+</extension>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.9.11" method="upgrade" group="system">
+	<name>Chaport Live Chat</name>
+	<author>Chaport.com</author>
+	<creationDate>14.08.2019</creationDate>
+	<copyright>
+		Copyright (c) 2023 Chaport.	
+	</copyright>
+	<license>GNU/GPLv3</license>
+	<authorEmail>info@chaport.com</authorEmail>
+	<authorUrl>https://www.chaport.com/</authorUrl>
+	<version>1.0.1</version>
+	<description>This is plugin for easiest way to import our chat</description>
+	<files>
+		<filename plugin="chaport">chaport.php</filename>
+		<filename plugin="chaport">chaport.xml</filename>
+		<filename plugin="chaport">index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="settings" label="Settings">
+				<field name="installation_type" type="radio" default="1" label="&lt;b&gt;Installation type&lt;/b&gt;" class="btn-group btn-group-yesno">
+					<option value="1">Default </option>
+					<option value="2">Installation code </option>
+				</field>
+				<field name="app_id" type="label" default="" label="&lt;b&gt;App ID&lt;/b&gt;" class="inputbox" width="220px" showon="installation_type:1"/>
+				<field name="installation_code" filter="raw" type="textarea" label="&lt;b&gt;Installation code&lt;/b&gt;" class="inputbox span7" rows="10" showon="installation_type:2"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

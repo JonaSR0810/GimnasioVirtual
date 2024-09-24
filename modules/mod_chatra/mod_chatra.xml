@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.9" method="upgrade" client="site">
+    <name>Chatra</name>
+    <author>Roger Wilco LLC</author>
+    <creationDate>September 2015</creationDate>
+    <authorEmail>support@chatra.com</authorEmail>
+    <authorUrl>https://chatra.com</authorUrl>
+    <copyright>(C) 2021 chatra.com</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>1.0.4</version>
+    <description>
+        <![CDATA[
+            Chatra live chat module
+            <br>
+            1. Navigate to Extensions -> Modules, Press "New" and choose "Chatra" module from the list.
+                Open Chatra module settings.
+            <br>
+            2. Sign up for a free Chatra account at
+                <a href="https://app.chatra.io/?utm_source=joomla" target="_blank" >app.chatra.io</a>,
+                then copy and paste your Widget code from "Setup & customize" section into the "Widget Code"
+                form in your Chatra module settings. Press the "Save" button.<br>
+            3. Set other module settings to:
+				<ul>
+					<li>Status: <i>Published</i>.</li>
+					<li>Position: choose <i>Top</i> or <i>Footer</i>.</li>
+					<li>Menu assignment -> Module Assignment: <i>On all pages</i>.</li>
+				</ul>
+            4. Now Log in to your Chatra <a href="https://app.chatra.io/?utm_source=joomla" target="_blank">Dashboard</a>
+                 to start chatting with your website visitors and manage preferences.
+        ]]>
+    </description>
+    <files>
+        <filename>mod_chatra.xml</filename>
+        <filename module="mod_chatra">mod_chatra.php</filename>
+        <folder>tmpl</folder>
+    </files>
+    <positions>
+        <position>breadcrumb</position>
+        <position>top</position>
+    </positions>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+	            <field name="chatra_widget_code"
+                       type="textarea"
+                       rows="15"
+                       label="Widget code"
+                       description="Your Chatra Widget code from &lt;b&gt;Setup &amp; customize&lt;/b&gt; section" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,1 @@
+alter table #__onevote_ballot_items add votes tinyint default 1 after position;
